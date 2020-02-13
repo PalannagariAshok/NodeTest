@@ -1,0 +1,12 @@
+//Node JS Code
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://sohamUser:vignanatsoham2020@basiccluster-7hj63.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+//Compass Connection
+mongodb+srv://sohamUser:vignanatsoham2020@basiccluster-7hj63.mongodb.net/test
